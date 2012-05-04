@@ -2,7 +2,7 @@ package com.minimalbits.tasks.cqrs.handler
 
 import com.minimalbits.tasks.cqrs.repository.{TaskRepository, BaseRepository}
 import com.minimalbits.tasks.cqrs.command.{CreateTaskCommand, BaseCommand}
-import com.minimalbits.tasks.cqrs.model.Task
+import com.minimalbits.tasks.cqrs.domain.Task
 
 
 /**

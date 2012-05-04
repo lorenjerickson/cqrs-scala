@@ -1,4 +1,4 @@
-package com.minimalbits.tasks.cqrs.model {
+package com.minimalbits.tasks.cqrs.domain {
 package model {
 
 import _root_.net.liftweb.mapper._

@@ -1,4 +1,4 @@
-package com.minimalbits.tasks.cqrs.model
+package com.minimalbits.tasks.cqrs.domain
 
 import collection.mutable.ArrayBuffer
 import com.minimalbits.tasks.cqrs.event.DomainEvent
@@ -12,8 +12,9 @@ import com.minimalbits.tasks.cqrs.event.DomainEvent
  * To change this template use File | Settings | File Templates.
  */
 
-abstract class AggregateRoot(id:String) {
+abstract class AggregateRoot(val id:String) {
   val changes = new ArrayBuffer[DomainEvent]()
+  var version = 0;
 
   def uncommittedChanges = changes
 
