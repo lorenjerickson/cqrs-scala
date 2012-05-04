@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e7d3f6c-604f-48a9-82ea-7820bd4fc2a4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/TaskDao.scala" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/model/Task.scala" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/model/AggregateRoot.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/model/User.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/User.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web.iml" afterPath="$PROJECT_DIR$/web.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala" />
     </list>
     <ignored path="cqrs-scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,42 +60,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EventStore.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="EventStore.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="51" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.7738359">
+            <state line="56" column="38" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#47#73#0" expanded="true" />
-                <element signature="docComment;class#415:1789" expanded="false" />
+                <element signature="docComment;class#415:1829" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseDao.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="BaseDao.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="43" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#40#100#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DomainEvent.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventDao.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="44" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
+            <state line="18" column="43" selection-start="552" selection-end="552" vertical-scroll-proportion="0.33924612">
               <folding>
                 <element signature="e#40#100#0" expanded="true" />
               </folding>
@@ -1022,31 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#40#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#40#100#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventDescriptor.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="42" selection-start="297" selection-end="297" vertical-scroll-proportion="0.22616407">
@@ -1056,10 +1001,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="51" selection-start="1765" selection-end="1765" vertical-scroll-proportion="0.7738359">
+        <state line="56" column="38" selection-start="1760" selection-end="1760" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#47#73#0" expanded="true" />
-            <element signature="docComment;class#415:1789" expanded="false" />
+            <element signature="docComment;class#415:1829" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="26" selection-start="223" selection-end="223" vertical-scroll-proportion="0.18847007">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="61" selection-start="560" selection-end="560" vertical-scroll-proportion="0.39578715">
+          <folding>
+            <element signature="e#40#100#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="552" selection-end="552" vertical-scroll-proportion="0.33924612">
+          <folding>
+            <element signature="e#40#100#0" expanded="true" />
           </folding>
         </state>
       </provider>

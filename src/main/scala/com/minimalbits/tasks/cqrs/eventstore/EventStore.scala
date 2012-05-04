@@ -36,13 +36,15 @@ class EventStore(publisher: EventPublisher, dao: BaseDao) {
     }
 
     var version:Int = expectedVersion
-    val eventDescs = new ArrayBuffer[EventDescriptor]()
     for (event <- events) {
       version += 1
-      val eventDesc = new EventDescriptor(id, event, version);
-      publisher.publish(event);
+      val eventDesc = new EventDescriptor(id, event, version)
+      currentEvents += eventDesc
+      publisher.publish(event)
     }
 
+    // TODO is this necessary?
+    dao.update(id, currentEvents)
   }
 
   def getEventsForAggregate(id: String):Buffer[DomainEvent] = {
