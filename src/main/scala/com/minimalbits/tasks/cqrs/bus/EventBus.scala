@@ -1,7 +1,7 @@
 package com.minimalbits.tasks.cqrs.bus
 
 import com.minimalbits.tasks.cqrs.event.DomainEvent
-import collection.mutable.{LinkedList, ArrayBuffer, Buffer, WeakHashMap}
+import collection.mutable.{ArrayBuffer, Buffer, WeakHashMap}
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,10 +14,10 @@ import collection.mutable.{LinkedList, ArrayBuffer, Buffer, WeakHashMap}
 class EventBus {
   val handlerMap = new WeakHashMap[String, ArrayBuffer[BaseEventHandler]]()
 
-  def registerHandler(name:String, handler:BaseEventHandler) {
+  def registerHandler(name: String, handler: BaseEventHandler) {
     var handlers = handlerMap.get(name)
     handlers match {
-      case buffer:Buffer[BaseEventHandler] => buffer += handler
+      case buffer: Buffer[BaseEventHandler] => buffer += handler
       case _ => {
         var newBuffer = new ArrayBuffer[BaseEventHandler]()
         newBuffer += handler
@@ -26,10 +26,12 @@ class EventBus {
     }
   }
 
-  def publishEvent(event:DomainEvent) {
+  def publishEvent(event: DomainEvent) {
     val entry = handlerMap.get(event.eventName)
     entry match {
-      case handlers:List[BaseEventHandler] => handlers.foreach(handler => handler.handleEvent(event))
+      case handlers: List[BaseEventHandler] => for (handler: BaseEventHandler <- handlers) {
+        handler.handleEvent(event)
+      }
       case _ => // TODO log warning: event triggered without handlers
     }
   }

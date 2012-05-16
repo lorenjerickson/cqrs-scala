@@ -1,7 +1,8 @@
 package com.minimalbits.tasks.cqrs.domain
 
-import collection.mutable.ArrayBuffer
 import com.minimalbits.tasks.cqrs.event.DomainEvent
+import com.minimalbits.tasks.cqrs.util.GuidFactory
+import collection.mutable.{Buffer, ArrayBuffer}
 
 
 /**
@@ -12,7 +13,8 @@ import com.minimalbits.tasks.cqrs.event.DomainEvent
  * To change this template use File | Settings | File Templates.
  */
 
-abstract class AggregateRoot(val id:String) {
+abstract class AggregateRoot() {
+  val id = GuidFactory.generateGuid()
   val changes = new ArrayBuffer[DomainEvent]()
   var version = 0;
 
@@ -22,11 +24,11 @@ abstract class AggregateRoot(val id:String) {
     changes.clear()
   }
 
-  def applyChange(event:DomainEvent) {
+  def applyChange(event: DomainEvent) {
     applyChangeInternal(event, true)
   }
 
-  def loadFromHistory(history:List[DomainEvent]) {
+  def loadFromHistory(history: Buffer[DomainEvent]) {
     for (event <- history) {
       applyChangeInternal(event, false)
     }
@@ -37,5 +39,5 @@ abstract class AggregateRoot(val id:String) {
    * @param event a concrete implementation of the DomainEvent class
    * @param isNew a flag indicating whether the event should be dispatched to the query side
    */
-  def applyChangeInternal(event:DomainEvent, isNew:Boolean)
+  def applyChangeInternal(event: DomainEvent, isNew: Boolean)
 }

@@ -1,7 +1,7 @@
 package com.minimalbits.tasks.cqrs.domain
 
-import org.joda.time.DateTime
 import com.minimalbits.tasks.cqrs.event.{UnsupportedEventException, DomainEvent, TaskCreatedEvent}
+import java.util.Date
 
 
 /**
@@ -12,12 +12,16 @@ import com.minimalbits.tasks.cqrs.event.{UnsupportedEventException, DomainEvent,
  * To change this template use File | Settings | File Templates.
  */
 
-class Task(id:String, var name:String, var description:String, var dueDate:DateTime, var completed:Boolean) extends AggregateRoot(id) {
-  val createdEvent:TaskCreatedEvent = new TaskCreatedEvent(id, name, description, dueDate, completed)
+class Task extends AggregateRoot {
+  var name = ""
+  var description = ""
+  var dueDate: Date = new Date()
+  var completed: Boolean = false
+
+  val createdEvent: TaskCreatedEvent = new TaskCreatedEvent(id, name, description, dueDate, completed)
   applyChange(createdEvent)
 
-  def applyTaskCreated(event:TaskCreatedEvent) {
-    this.id = event.id          // TODO hmmmm
+  def applyTaskCreated(event: TaskCreatedEvent) {
     this.name = event.name
     this.description = event.description
     this.dueDate = event.dueDate

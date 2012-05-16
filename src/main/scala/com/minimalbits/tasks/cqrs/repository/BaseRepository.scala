@@ -1,7 +1,6 @@
 package com.minimalbits.tasks.cqrs.repository
 
 import com.minimalbits.tasks.cqrs.domain.AggregateRoot
-import com.minimalbits.tasks.cqrs.dao.BaseDao
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,7 +10,8 @@ import com.minimalbits.tasks.cqrs.dao.BaseDao
  * To change this template use File | Settings | File Templates.
  */
 
-abstract class BaseRepository(dao:BaseDao) {
-  def save(obj:AggregateRoot)
-  def getById(id:String):AggregateRoot
+abstract class BaseRepository {
+  def save(obj: AggregateRoot, expectedVersion: Int)
+
+  def getById(id: String): AggregateRoot
 }

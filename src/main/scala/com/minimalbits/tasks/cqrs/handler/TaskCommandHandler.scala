@@ -14,16 +14,16 @@ import com.minimalbits.tasks.cqrs.domain.Task
  */
 
 class TaskCommandHandler extends BaseCommandHandler {
-  val repository:BaseRepository = new TaskRepository()
+  val repository: BaseRepository = new TaskRepository()
 
-  def handleCommand(command:BaseCommand) {
+  def handleCommand(command: BaseCommand) {
     command match {
-      case createCommand:CreateTaskCommand => handleCreate(createCommand)
+      case createCommand: CreateTaskCommand => handleCreate(createCommand)
       case _ => throw new InvalidCommandException()
     }
   }
 
-  def handleCreate(createCommand:CreateTaskCommand) {
+  def handleCreate(createCommand: CreateTaskCommand) {
     val task = new Task(createCommand.id, createCommand.name, createCommand.description, createCommand.dueDate, createCommand.completed)
     repository.save(task)
   }

@@ -1,7 +1,7 @@
 package com.minimalbits.tasks.cqrs.dao
 
 import com.minimalbits.tasks.cqrs.eventstore.EventDescriptor
-import collection.mutable.{ArrayBuffer, Buffer}
+import collection.mutable.ArrayBuffer
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,7 +11,9 @@ import collection.mutable.{ArrayBuffer, Buffer}
  * To change this template use File | Settings | File Templates.
  */
 
-class EventDao(dbcfg:DaoConfig) extends BaseDao(dbcfg) {
+class EventDao extends BaseDao {
+  val cfg = new DaoConfig("localhost:3000", "sa", "root", "cqrs-scala", "events")
+
   def create(id: String, events: ArrayBuffer[EventDescriptor]) {}
 
   def retrieve(id: String) = null

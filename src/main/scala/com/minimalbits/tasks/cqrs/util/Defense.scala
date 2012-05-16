@@ -1,7 +1,5 @@
 package com.minimalbits.tasks.cqrs.util
 
-import com.sun.javaws.exceptions.InvalidArgumentException
-
 /**
  * Created with IntelliJ IDEA.
  * User: a239597
@@ -12,10 +10,10 @@ import com.sun.javaws.exceptions.InvalidArgumentException
 
 object Defense {
   def notNull(any: Any) {
-    if (any == null) throw new InvalidOperationException()
+    if (any == null) throw new InvalidOperationException("defense: null reference")
   }
 
-  def inRange(a: Int, min: Int, max: Int) = {
-    if (a < min || a >= max) throw new InvalidOperationException()
+  def inRange(a: Int, min: Int, max: Int) {
+    if (a < min || a >= max) throw new InvalidOperationException("defense: index not in expected range")
   }
 }

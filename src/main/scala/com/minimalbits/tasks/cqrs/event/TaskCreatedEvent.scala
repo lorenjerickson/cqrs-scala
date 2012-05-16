@@ -1,6 +1,6 @@
 package com.minimalbits.tasks.cqrs.event
 
-import org.joda.time.DateTime
+import java.util.Date
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,6 +10,6 @@ import org.joda.time.DateTime
  * To change this template use File | Settings | File Templates.
  */
 
-case class TaskCreatedEvent(id: String, name: String, description: String, dueDate: DateTime, completed: Boolean) extends DomainEvent {
+case class TaskCreatedEvent(id: String, name: String, description: String, dueDate: Date, completed: Boolean) extends DomainEvent {
   val eventName = "TaskCreatedEvent"
 }

@@ -1,12 +1,9 @@
 package com.minimalbits.tasks.cqrs.eventstore
 
-import java.util.ArrayList
-import com.minimalbits.tasks.cqrs.domain.AggregateRoot
-import com.minimalbits.tasks.cqrs.eventstore.{EventPublisher, EventDescriptor}
 import com.minimalbits.tasks.cqrs.event.DomainEvent
-import collection.mutable.{ArrayBuffer, Buffer, MutableList}
+import collection.mutable.{ArrayBuffer, Buffer}
 import com.minimalbits.tasks.cqrs.util.Defense
-import com.minimalbits.tasks.cqrs.dao.BaseDao
+import com.minimalbits.tasks.cqrs.dao.EventDao
 
 /**
  * Created with IntelliJ IDEA.
@@ -16,26 +13,28 @@ import com.minimalbits.tasks.cqrs.dao.BaseDao
  * To change this template use File | Settings | File Templates.
  */
 
-class EventStore(publisher: EventPublisher, dao: BaseDao) {
+class EventStore {
+  val publisher = new EventPublisher()
+  val dao: EventDao = new EventDao()
+
   def saveEvents(id: String, events: Buffer[DomainEvent], expectedVersion: Int) {
     Defense.notNull(id)
     Defense.notNull(events)
     Defense.notNull(dao)
 
-    var currentEvents:ArrayBuffer[EventDescriptor] = dao.retrieve(id)
+    var currentEvents: ArrayBuffer[EventDescriptor] = dao.retrieve(id)
     if (currentEvents == null) {
       currentEvents = new ArrayBuffer[EventDescriptor]()
       dao.create(id, currentEvents)
     } else {
-      var count:Int = currentEvents.length
-      val lastEvent:EventDescriptor = currentEvents(count-1)
-      if (lastEvent.version != expectedVersion)
-      {
+      var count: Int = currentEvents.length
+      val lastEvent: EventDescriptor = currentEvents(count - 1)
+      if (lastEvent.version != expectedVersion) {
         throw new ConcurrencyException
       }
     }
 
-    var version:Int = expectedVersion
+    var version: Int = expectedVersion
     for (event <- events) {
       version += 1
       val eventDesc = new EventDescriptor(id, event, version)
@@ -47,14 +46,14 @@ class EventStore(publisher: EventPublisher, dao: BaseDao) {
     dao.update(id, currentEvents)
   }
 
-  def getEventsForAggregate(id: String):Buffer[DomainEvent] = {
+  def getEventsForAggregate(id: String): Buffer[DomainEvent] = {
     Defense.notNull(id)
     Defense.notNull(dao)
 
-    var events:Buffer[DomainEvent] = new ArrayBuffer[DomainEvent]()
+    var events: Buffer[DomainEvent] = new ArrayBuffer[DomainEvent]()
 
     val eventDescs = dao.retrieve(id)
-    for (eventDesc:EventDescriptor <- eventDescs) {
+    for (eventDesc: EventDescriptor <- eventDescs) {
       events += eventDesc.event
     }
 

@@ -11,8 +11,10 @@ import com.minimalbits.tasks.cqrs.event.DomainEvent
  * To change this template use File | Settings | File Templates.
  */
 
-class EventPublisher(bus: EventBus) {
-  def publish(event: DomainEvent) {
+class EventPublisher {
+  val eventBus: EventBus = new EventBus()
 
+  def publish(event: DomainEvent) {
+    eventBus.publishEvent(event)
   }
 }

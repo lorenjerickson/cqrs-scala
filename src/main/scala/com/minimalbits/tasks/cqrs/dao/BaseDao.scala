@@ -1,7 +1,7 @@
 package com.minimalbits.tasks.cqrs.dao
 
 import com.minimalbits.tasks.cqrs.eventstore.EventDescriptor
-import collection.mutable.{ArrayBuffer, Buffer}
+import collection.mutable.ArrayBuffer
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,9 +11,12 @@ import collection.mutable.{ArrayBuffer, Buffer}
  * To change this template use File | Settings | File Templates.
  */
 
-abstract class BaseDao(dbconfig:DaoConfig) {
-  def create(id:String, events:ArrayBuffer[EventDescriptor])
-  def retrieve(id:String):ArrayBuffer[EventDescriptor]
-  def update(id:String, events:ArrayBuffer[EventDescriptor])
-  def delete(id:String)
+abstract class BaseDao {
+  def create(id: String, events: ArrayBuffer[EventDescriptor])
+
+  def retrieve(id: String): ArrayBuffer[EventDescriptor]
+
+  def update(id: String, events: ArrayBuffer[EventDescriptor])
+
+  def delete(id: String)
 }
