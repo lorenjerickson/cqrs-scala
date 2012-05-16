@@ -11,5 +11,5 @@ import org.joda.time.DateTime
  */
 
 case class TaskCreatedEvent(id: String, name: String, description: String, dueDate: DateTime, completed: Boolean) extends DomainEvent {
-
+  val eventName = "TaskCreatedEvent"
 }

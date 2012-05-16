@@ -1,5 +1,7 @@
 package com.minimalbits.tasks.cqrs.handler
 
+import com.minimalbits.tasks.cqrs.command.BaseCommand
+
 /**
  * Created with IntelliJ IDEA.
  * User: a239597
@@ -9,5 +11,5 @@ package com.minimalbits.tasks.cqrs.handler
  */
 
 abstract class BaseCommandHandler {
-
+   def handleCommand(command:BaseCommand)
 }

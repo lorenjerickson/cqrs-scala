@@ -8,6 +8,6 @@ package com.minimalbits.tasks.cqrs.util
  * To change this template use File | Settings | File Templates.
  */
 
-class InvalidOperationException extends Exception {
+class InvalidOperationException(message:String) extends Exception(message) {
 
 }
