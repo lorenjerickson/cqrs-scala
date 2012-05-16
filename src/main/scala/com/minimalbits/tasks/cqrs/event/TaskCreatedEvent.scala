@@ -11,5 +11,5 @@ import java.util.Date
  */
 
 case class TaskCreatedEvent(id: String, name: String, description: String, dueDate: Date, completed: Boolean) extends DomainEvent {
-  val eventName = "TaskCreatedEvent"
+
 }

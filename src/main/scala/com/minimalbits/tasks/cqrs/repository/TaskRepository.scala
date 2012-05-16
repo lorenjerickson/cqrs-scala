@@ -11,14 +11,14 @@ import com.minimalbits.tasks.cqrs.domain.{Task, AggregateRoot}
  * To change this template use File | Settings | File Templates.
  */
 
-class TaskRepository extends BaseRepository {
+class TaskRepository extends BaseRepository[Task] {
   val eventStore = new EventStore
 
-  def save(obj: AggregateRoot, expectedVersion: Int) {
-    eventStore.saveEvents(obj.id, obj.changes, expectedVersion)
+  def save(task: Task, expectedVersion: Int) {
+    eventStore.saveEvents(task.id, task.changes, expectedVersion)
   }
 
-  def getById(id: String) {
+  def getById(id: String):Task = {
     val events = eventStore.getEventsForAggregate(id)
     val task = new Task()
     task.loadFromHistory(events)

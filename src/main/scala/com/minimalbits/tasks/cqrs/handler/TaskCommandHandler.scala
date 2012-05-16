@@ -1,8 +1,8 @@
 package com.minimalbits.tasks.cqrs.handler
 
 import com.minimalbits.tasks.cqrs.repository.{TaskRepository, BaseRepository}
-import com.minimalbits.tasks.cqrs.command.{CreateTaskCommand, BaseCommand}
 import com.minimalbits.tasks.cqrs.domain.Task
+import com.minimalbits.tasks.cqrs.command.{RenameTaskCommand, CompleteTaskCommand, CreateTaskCommand, BaseCommand}
 
 
 /**
@@ -14,17 +14,37 @@ import com.minimalbits.tasks.cqrs.domain.Task
  */
 
 class TaskCommandHandler extends BaseCommandHandler {
-  val repository: BaseRepository = new TaskRepository()
+  val repository: TaskRepository = new TaskRepository()
 
   def handleCommand(command: BaseCommand) {
     command match {
       case createCommand: CreateTaskCommand => handleCreate(createCommand)
+      case completeCommand: CompleteTaskCommand => handleComplete(completeCommand)
+      case renameCommand: RenameTaskCommand => handleRename(renameCommand)
       case _ => throw new InvalidCommandException()
     }
   }
 
   def handleCreate(createCommand: CreateTaskCommand) {
-    val task = new Task(createCommand.id, createCommand.name, createCommand.description, createCommand.dueDate, createCommand.completed)
-    repository.save(task)
+    val task = new Task()
+    task.name = createCommand.name
+    task.description = createCommand.description
+    task.dueDate = createCommand.dueDate
+    task.completed = createCommand.completed
+
+    repository.save(task, 0)
   }
+
+  def handleComplete(completeCommand:CompleteTaskCommand) {
+    val task:Task = repository.getById(completeCommand.id)
+    task.markComplete()
+    repository.save(task, completeCommand.expectedVersion)
+  }
+
+  def handleRename(command: RenameTaskCommand) {
+    val task:Task = repository.getById(command.id)
+    task.rename(command.name)
+    repository.save(task, command.expectedVersion)
+  }
+
 }

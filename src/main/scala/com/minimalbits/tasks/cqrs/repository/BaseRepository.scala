@@ -10,8 +10,8 @@ import com.minimalbits.tasks.cqrs.domain.AggregateRoot
  * To change this template use File | Settings | File Templates.
  */
 
-abstract class BaseRepository {
-  def save(obj: AggregateRoot, expectedVersion: Int)
+abstract class BaseRepository[T] {
+  def save(obj: T, expectedVersion: Int)
 
-  def getById(id: String): AggregateRoot
+  def getById(id: String): T
 }

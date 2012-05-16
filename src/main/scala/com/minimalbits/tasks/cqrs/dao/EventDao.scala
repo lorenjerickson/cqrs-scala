@@ -16,7 +16,8 @@ class EventDao extends BaseDao {
 
   def create(id: String, events: ArrayBuffer[EventDescriptor]) {}
 
-  def retrieve(id: String) = null
+  // TODO
+  def retrieve(id: String) = new ArrayBuffer[EventDescriptor]()
 
   def update(id: String, events: ArrayBuffer[EventDescriptor]) {}
 

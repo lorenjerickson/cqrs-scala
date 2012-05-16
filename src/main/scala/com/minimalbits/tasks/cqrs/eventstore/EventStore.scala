@@ -53,7 +53,8 @@ class EventStore {
     var events: Buffer[DomainEvent] = new ArrayBuffer[DomainEvent]()
 
     val eventDescs = dao.retrieve(id)
-    for (eventDesc: EventDescriptor <- eventDescs) {
+
+    for (eventDesc:EventDescriptor  <- eventDescs) {
       events += eventDesc.event
     }
 

@@ -9,5 +9,5 @@ package com.minimalbits.tasks.cqrs.event
  */
 
 abstract class DomainEvent {
-  val eventName:String
+
 }

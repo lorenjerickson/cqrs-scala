@@ -27,7 +27,7 @@ class EventBus {
   }
 
   def publishEvent(event: DomainEvent) {
-    val entry = handlerMap.get(event.eventName)
+    val entry = handlerMap.get(event.getClass.getName)
     entry match {
       case handlers: List[BaseEventHandler] => for (handler: BaseEventHandler <- handlers) {
         handler.handleEvent(event)

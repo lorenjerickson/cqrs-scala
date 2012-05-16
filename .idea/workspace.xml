@@ -3,20 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="7e7d3f6c-604f-48a9-82ea-7820bd4fc2a4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" afterPath="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/CommandQueue.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/CommandQueue.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/CreateTaskCommand.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/CreateTaskCommand.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskCreatedEvent.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskCreatedEvent.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventPublisher.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventPublisher.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/util/Defense.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/util/Defense.scala" />
     </list>
     <ignored path="cqrs-scala.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,108 +70,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TaskRepository.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#47#93#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventBus.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="75" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#40#91#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventStore.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="28" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#47#98#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventPublisher.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventPublisher.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Task.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="27" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#43#141#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskCreatedEvent.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskCreatedEvent.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="12" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="docComment;class#65:391" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AggregateRoot.scala" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="36" selection-start="699" selection-end="699" vertical-scroll-proportion="0.35856575">
-              <folding>
-                <element signature="e#43#94#0" expanded="true" />
-                <element signature="docComment;class#196:1078" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseRepository.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="49" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Boot.scala" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="55" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#27#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="TaskCommandHandler.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="47" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
+            <state line="18" column="23" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#44#121#0" expanded="true" />
+                <element signature="docComment;class#285:1592" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskListQueryHandler.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskListQueryHandler.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#200#245#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskDetailQueryHandler.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskDetailQueryHandler.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#200#251#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Task.scala" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="53" selection-start="1142" selection-end="1144" vertical-scroll-proportion="0.8152174">
+              <folding>
+                <element signature="e#43#64#0" expanded="true" />
+                <element signature="docComment;class#109:2144" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -195,22 +130,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/util/InvalidOperationException.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseCommandHandler.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/CommandQueue.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/util/Defense.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskRenamedEvent.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/UncompleteTaskCommand.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/CompleteTaskCommand.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventPublisher.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dto/TaskDetailDto.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskQueryHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseQueryHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseListQueryHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseDetailQueryHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskListQueryHandler.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskDetailQueryHandler.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskCreatedEvent.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala" />
       </list>
     </option>
   </component>
@@ -504,6 +439,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="event" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minimalbits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dto" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minimalbits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="domain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -539,6 +542,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs-scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minimalbits" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cqrs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -902,7 +939,11 @@
       <created>1337198742236</created>
       <updated>1337198742236</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="eventbus, commandqueue">
+      <created>1337205446891</created>
+      <updated>1337205446891</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -927,7 +968,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="1174" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -942,10 +983,10 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.49719328" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15827923" sideWeight="0.67046535" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15827923" sideWeight="0.67046535" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24188311" sideWeight="0.67046535" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32953465" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2701525" sideWeight="0.49719328" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -957,6 +998,9 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -997,9 +1041,9 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="eventbus, commandqueue" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
     <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
     <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
@@ -1019,133 +1063,132 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/DomainEvent.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="22" selection-start="248" selection-end="248" vertical-scroll-proportion="0.16434263">
+        <state line="30" column="21" selection-start="670" selection-end="685" vertical-scroll-proportion="0.3508772">
+          <folding>
+            <element signature="e#43#94#0" expanded="true" />
+            <element signature="docComment;class#196:1082" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/RenameTaskCommand.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="60" selection-start="260" selection-end="260" vertical-scroll-proportion="0.058479533">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/InvalidCommandException.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskRenamedEvent.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="6" selection-start="205" selection-end="205" vertical-scroll-proportion="0.14619882">
+        <state line="13" column="57" selection-start="278" selection-end="278" vertical-scroll-proportion="0.10233918">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/BaseEventHandler.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="324" selection-end="324" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#93:322" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/util/Defense.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="41" selection-end="41" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/bootstrap/liftweb/Boot.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="55" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#27#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="47" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#44#121#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="75" selection-start="951" selection-end="951" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#40#91#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventPublisher.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="507" selection-end="507" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#47#98#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/BaseDao.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="46" selection-start="530" selection-end="530" vertical-scroll-proportion="0.23904383">
+        <state line="17" column="0" selection-start="456" selection-end="456" vertical-scroll-proportion="0.23391813">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dao/EventDao.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="29" selection-start="334" selection-end="334" vertical-scroll-proportion="0.17928287">
+        <state line="18" column="9" selection-start="487" selection-end="487" vertical-scroll-proportion="0.38812786">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/BaseRepository.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/dto/TaskDetailDto.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="49" selection-start="385" selection-end="385" vertical-scroll-proportion="0.0">
+        <state line="12" column="0" selection-start="219" selection-end="219" vertical-scroll-proportion="0.14469454">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseDetailQueryHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="273" selection-end="273" vertical-scroll-proportion="0.16535433">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/bus/EventBus.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="39" selection-start="800" selection-end="800" vertical-scroll-proportion="0.6392694">
+          <folding>
+            <element signature="e#40#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/eventstore/EventStore.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="-0.00304414">
+          <folding>
+            <element signature="e#47#98#0" expanded="true" />
+            <element signature="docComment;class#242:1696" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/CompleteTaskCommand.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="16" selection-start="292" selection-end="292" vertical-scroll-proportion="0.17673048">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/command/UncompleteTaskCommand.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="59" selection-start="259" selection-end="259" vertical-scroll-proportion="0.08836524">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskCommandHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="23" selection-start="575" selection-end="575" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#44#121#0" expanded="true" />
+            <element signature="docComment;class#285:1592" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/BaseListQueryHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="38" selection-start="272" selection-end="272" vertical-scroll-proportion="0.13254787">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskListQueryHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="525" selection-end="525" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#200#245#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/handler/TaskDetailQueryHandler.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#200#251#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/Task.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="27" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0">
+        <state line="41" column="53" selection-start="1142" selection-end="1144" vertical-scroll-proportion="0.8152174">
           <folding>
-            <element signature="e#43#141#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/event/TaskCreatedEvent.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="12" selection-start="392" selection-end="392" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="docComment;class#65:391" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/repository/TaskRepository.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#47#93#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/minimalbits/tasks/cqrs/domain/AggregateRoot.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="699" selection-end="699" vertical-scroll-proportion="0.35856575">
-          <folding>
-            <element signature="e#43#94#0" expanded="true" />
-            <element signature="docComment;class#196:1078" expanded="false" />
+            <element signature="e#43#64#0" expanded="true" />
+            <element signature="docComment;class#109:2144" expanded="false" />
           </folding>
         </state>
       </provider>
